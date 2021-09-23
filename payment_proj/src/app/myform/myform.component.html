@@ -1,0 +1,76 @@
+
+<mat-toolbar *ngIf="true"color="warn">
+   <p >Transaction </p>
+   <button class="bt" (click)="oncli()">Logout</button>
+ </mat-toolbar>
+ 
+<form #h='ngForm' class="new"(ngSubmit)='onSubmit()'>
+   <div>
+      <p class="lab">Add Payer </p>
+<table >
+      <tr>
+         <td><label class="form-cont">Sender Account</label></td>   
+         <td><input type="text" required  minlength="14"  (input)="onenter($event)" class="form-control"  [(ngModel)]='model.sender_acc_id' #sender_acc_id='ngModel'  name='sender_acc_id'>
+         </td>   
+         <td *ngIf="get"><label class="form-cont">Sender Name</label></td>
+         <td *ngIf="get"><input type="text" value={{cust.holder_name}} class="form-control" disabled> </td>
+      </tr> 
+      <tr>  
+         <td *ngIf="get"><label class="form-cont">Sender balance </label></td>
+         <td *ngIf="get"><input type="text" value={{cust.clear_balance}} class="form-control" disabled></td>
+      </tr> 
+</table>
+<p class="lab">Add Payee </p><table>
+         <tr>
+            <td><label>Reciever Account ID</label></td>
+            <td><input *ngIf="!dropdown" type="text" required (input)="onfetch1($event)"  class="form-control" [(ngModel)]='model.reciever_acc_bic' #reciever_acc_bic='ngModel'  name='reciever_acc_bic'>
+               <select *ngIf="dropdown" class="form-control" required [(ngModel)]='model.reciever_acc_bic' #reciever_acc_bic='ngModel'  name='reciever_acc_bic'>
+               <option *ngFor="let l1 of bankdrp" [value]="l1.id">{{l1.id}}&nbsp;&nbsp;{{l1.holder_name}}</option>
+               </select>
+            </td>      
+            <td *ngIf="get1"> <label>Reciever Account Name</label></td>  
+            <td *ngIf="get1"><input type="text" value={{bank.instname}} class="form-control" disabled></td>  
+         </tr> 
+      <tr>
+         <td><label>Reciever Name</label></td>
+         <td> <input type="text" required class="form-control" [(ngModel)]='model.reciever_name' #reciever_name='ngModel'  name='reciever_name'>
+         </td>      
+         <td><label>Reciever Account Number</label></td>
+         <td> <input type="text" class="form-control" [(ngModel)]='model.reciever_acc_no' #reciever_acc_no='ngModel'  name='reciever_acc_no'>
+         </td>      
+      </tr>
+      </table><p class="lab">Enter Amount Details</p><table>          
+      <tr>
+         <td><label class="for">Amount</label></td>
+          <td><input type="text"  required class="form-control" [(ngModel)]='model.amount' #amount='ngModel'  name='amount'>
+          </td>      
+         <td><label class="lab1">Message Code</label> </td>
+         <td>       
+               <select required class="form-control" [(ngModel)]='model.message' #message='ngModel'  name='message'>
+               <option *ngFor="let l1 of msg" [value]="l1">{{l1}}</option>
+               </select>
+         </td>
+      </tr>
+      <tr>
+         <td> <label>Transfer Type</label> </td>
+          <td> <input style="background: #e8f0fe;" class="form-control" *ngIf="cust.type === 'bank'"  placeholder="Bank Transfer" value="BTO" [(ngModel)]='model.transfer_type' #transfer_type='ngModel'  name='transfer_type'disabled>
+               <input style="background: #e8f0fe;" class="form-control" *ngIf="cust.type === 'cust'"  placeholder="Customer Transfer" value="CT"  [(ngModel)]='model.transfer_type' #transfer_type='ngModel'  name='transfer_type'disabled>
+              
+                <!--<select class="form-control" [(ngModel)]='model.transfer_type' #transfer_type='ngModel'  name='transfer_type'>
+                <option *ngFor="let l of trans" [value]="l">{{l}}</option>
+                </select>
+                </td>-->
+       </tr>      
+   
+   
+         
+           
+       
+</table>
+<button type="submit" (click)="onclick()"class="btn btn-black">Transfer</button>
+</div>
+</form>
+
+     
+         
+<router-outlet></router-outlet>

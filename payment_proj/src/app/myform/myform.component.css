@@ -1,0 +1,79 @@
+.body{
+    font-family: "Lato", sans-serif;
+    }
+  .form-cont{
+    text-align: right;
+    clear: both;
+    float:left;
+    margin-right:40px;
+  }
+  .lab1{
+    padding-left: 15px;
+    padding-right: 50px;
+  }
+  .for{
+    padding-right: 70px;
+  }
+    
+    td {
+      padding: 5px 0;
+      padding-left: 40px;
+        white-space: normal !important; 
+        word-wrap: break-word;  
+    
+      }
+      th {
+        white-space: normal !important; 
+        word-wrap: break-word;  
+    
+      }
+      .table1 {
+        table-layout: fixed;
+        margin-left: 30%;
+        margin-right: auto;
+      }
+  input{
+    width:auto;
+  } 
+  input.ng-invalid.ng-touched{
+    border:1px solid rgb(250, 83, 83);
+  }     
+
+.new{
+    margin-left: 5%;
+    margin-top:30px;
+    display: flex;
+    align-items: center;
+}
+label{
+    text-align: right;
+    clear: both;
+    float:left;
+    font-size: medium;
+    margin-right:15px;
+}
+.btn-black{
+  margin-top: 20px;
+  margin-bottom: 50px;
+    background-color: rgb(243, 36, 36) !important;
+    color: #fff;
+    margin-left: 50%;
+}
+.btn-blac{
+    background-color: rgb(36, 229, 243) !important;
+    color: #fff;
+}
+
+.bt{
+  border:0ch; color:rgb(247, 243, 243); font-size: large ;font-family:Times, serif;  
+   background:rgb(243, 36, 36);  font-weight:600;margin-left: 80%;}
+   input[type="text"]:disabled{background-color:#E8F0FE}
+.fo{background-color:#E8F0FE;}
+   
+.lab{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: x-large;
+  color:rgb(52, 47, 128);
+  padding-bottom: 5px;
+  padding-top: 15px;
+}

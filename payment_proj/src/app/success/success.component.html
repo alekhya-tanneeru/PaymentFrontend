@@ -1,0 +1,45 @@
+<mat-toolbar class="tool">
+  <span>Transaction Successful</span>
+</mat-toolbar>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<div class="container">
+   <table style="border:black;text-align: left" class="mat-elevation-z1" >
+    <thead></thead>
+    <tbody>
+      <tr ><th class="head"colspan="2">Transaction Details</th></tr>
+    <tr>
+      <td>Transaction Id</td>
+      <td>{{tran.id}}</td>
+    </tr>
+    <tr><td>Date & Time</td> <td>{{tran.dateandtime}}</td></tr>
+    <tr>
+      <td>Sender Account</td>
+      <td>{{tran.sender_acc_id}}</td>
+    </tr>
+      <tr>
+        <td>Reciever Account</td>
+        <td>{{tran.reciever_acc_bic}}</td></tr>
+      <tr>
+        <td>Reciever Name</td>  
+        <td>{{tran.reciever_name}}</td></tr>
+    <tr>
+      <td>Amount</td> 
+      <td>{{tran.amount| currency:'INR':'symbol'}}</td></tr> 
+
+      <tr><td>Message Code</td> <td>{{tran.message}}</td></tr>
+     <tr> <td>Transfer Type</td> <td>{{tran.transfer_type}}</td></tr>
+   
+    <tr><td colspan="2"><button (click)="onclick()" class="btn" >Ok</button></td></tr>
+  </tbody>
+</table> 
+
+</div>
+
+
+<router-outlet></router-outlet>
+
+

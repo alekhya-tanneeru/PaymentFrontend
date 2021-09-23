@@ -1,0 +1,72 @@
+.container{
+  text-align: center;
+}
+.head{
+padding-left: 25%;
+padding-bottom: 10px;
+font-size: x-large;
+font-family: 'Times New Roman', Times, serif;
+}
+.tbody{
+  font-family: "Lato", sans-serif;
+  }
+  .th{
+      font-family:Arial, Helvetica, sans-serif;
+      }
+  .mat-elevation-z1{
+      width: 40%;
+      margin-top: 40px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+td {
+      padding: 5px 0;
+      padding-left: 50px;
+   
+      white-space: normal !important; 
+      word-wrap: break-word;  
+  
+   
+  
+    }
+   
+   
+    .table1 {
+      table-layout: fixed;
+      margin-left: 30%;
+      margin-right: auto;
+    }
+input{
+  width:auto
+} 
+input.ng-invalid.ng-touched{
+  border:1px solid rgb(250, 83, 83);
+}     
+
+.new{
+  margin-left: 30%;
+  margin-top:30px;
+  display: flex;
+  align-items: center;
+}
+label{
+  text-align: right;
+  clear: both;
+  float:left;
+ 
+}
+
+.btn{
+  background-color: #6dd68d !important;
+  color: #fff;
+  width:30%;
+  margin-left:25%;
+  margin-right:25%;
+ 
+}
+.tool{
+  background: #6dd68d;
+  color: #fff;
+}
+
